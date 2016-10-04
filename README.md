@@ -37,6 +37,17 @@ users = User.find(:email => 'a@b.com')
 
 ```
 
+The model class `User` defines a collection named `users`. The mapping from class name to collection name conforms to the behaviour of ActiveRecord. You can override this by explicitly naming the collection like:
+
+```ruby
+class User
+  include Mongo::Document
+  
+  self.collection_name = 'old_users'
+end
+
+```
+
 The model class `User` has all public methods defined in `Mongo::Collection` by `mongo` Gem. In fact the former forwards those method calls to the latter. You use the model class just as a `Mongo::Collection` object!
 
 Before you call any methods of a `Mongo::Collection` object, you need to call `Mongo::Document.establish_connection` first. It takes a singel hash parameter, in which a `hosts` or a `uri` field must be provided. The `uri` conforms to the MongoDB document: https://docs.mongodb.com/manual/reference/connection-string/. The other fields of the `spec` hash are optional and documented in: https://docs.mongodb.com/ruby-driver/v2.2/tutorials/ruby-driver-create-client/#ruby-driver-client-options
