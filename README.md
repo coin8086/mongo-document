@@ -1,5 +1,5 @@
 # mongo-document
-A slim Mongo document model for MongoDB!
+A helper for defining model class for MongoDB Ruby Driver
 
 # Why do I need it?
 1. You want something simple yet powerfull - The `mongo` Gem seems fit, but you can't build model class like `Mongoid` does with it.
