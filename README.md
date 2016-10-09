@@ -1,5 +1,6 @@
 # Mongo Document
-A helper for defining model class for MongoDB Ruby Driver
+A helper for defining model class for MongoDB Ruby Driver. 
+Blog post for it:  http://huiming.io/2016/10/07/mongo-document.html
 
 # Why do I need it?
 1. You want something simple yet powerfull - The `mongo` Gem seems fit, but you can't build model class like `Mongoid` does with it.
