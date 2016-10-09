@@ -1,4 +1,4 @@
-# mongo-document
+# Mongo Document
 A helper for defining model class for MongoDB Ruby Driver
 
 # Why do I need it?
